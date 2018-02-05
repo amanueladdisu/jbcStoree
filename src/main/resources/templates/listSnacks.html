@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="www.thymeleaf.org">
+
+<head>
+
+    <meta charset="UTF-8" />
+
+    <title>Title</title>
+
+</head>
+
+<body>
+
+<a href="/addsna">Add a Snacks</a><br />
+
+
+<table>
+
+
+
+    <tr th:each="snacks : ${snackss}">
+        <th th:text="${snacks.crunchiness}"></th>
+        <th th:text="${snacks.price}"></th><br />
+
+       <td>
+
+            <a th:href="@{/update/{id}(id=${resume.id})}">Add a items</a>
+            <a th:href="@{/update/{id}(id=${resume.id})}">Add a price</a>
+            <a th:href="@{/update/{id}(id=${resume.id})}">Add a crunchiness</a>
+
+        </td>
+    </tr>
+
+</table>
+
+</body>
+
+</html>

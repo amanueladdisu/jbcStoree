@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html><!DOCTYPE html>
+
+<html lang="en" xmlns:th="www.thymeleaf.org">
+
+<head>
+
+    <meta charset="UTF-8" />
+
+    <title>Title</title>
+
+</head>
+
+<body>
+
+<form action="#"
+
+      th:action="@{/process}"
+
+      th:object="${cosmotics}"
+
+      method="post">
+
+    <input type="hidden" th:field="*{id}" />
+
+    brand:<input type="text" th:field="*{brand}" />
+    <span th:if="${#fields.hasErrors('brand')}"
+
+          th:errors="*{brand}"></span><br />
+    <br />
+    Price :<input type="text" th:field="*{price}" />
+    <span th:if="${#fields.hasErrors('price')}"
+          th:errors="*{price}"></span><br />
+    <br />
+    popularity :<input type="text" th:field="*{popularity}" />
+    <span th:if="${#fields.hasErrors('popularity')}"
+          th:errors="*{popularity}"></span><br />
+
+
+    <br />
+    <input type="submit" value="Submit" />
+
+</form>
+
+</body>
+
+</html>

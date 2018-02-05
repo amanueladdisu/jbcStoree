@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="www.thymeleaf.org">
+
+<head>
+
+    <meta charset="UTF-8" />
+
+    <title>Title</title>
+
+</head>
+
+<body>
+
+<a href="/addcli">Add a Cleaningitems</a><br />
+
+
+<table>
+
+
+
+    <tr th:each="cleaningitems : ${cleaningitemss}">
+        <th th:text="${cleaningitems.Strength}"></th>
+        <th th:text="${cleaningitems.price}"></th><br />
+
+
+        <td>
+
+            <a th:href="@{/update/{id}(id=${item.id})}">Add a items</a>
+            <a th:href="@{/update/{id}(id=${item.id})}">Add a price</a>
+            <a th:href="@{/update/{id}(id=${item.id})}">Add a strenght</a>
+
+
+
+        </td>
+
+
+    </tr>
+
+
+
+</table>
+
+
+</body>
+
+</html>

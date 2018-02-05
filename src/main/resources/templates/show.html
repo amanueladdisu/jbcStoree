@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="/">Show all JBCSTORE inventory and revenue</a><br />
+
+Strength :<p th:text="${cleaningitems.Strength}" ></p><br />
+price:<p th:text="${cleaningitems.price}" ></p><br />
+Brand :<p th:text="${cosmotics.Brand}" ></p><br />
+popularity :<p th:text="${cosmotics.popularity}" ></p><br />
+price:<p th:text="${cosmotics.price}" ></p><br />
+revenue :<p th:text="${item.revenue}" ></p><br />
+items :<p th:text="${item.items}" ></p><br />
+Crunchiness :<p th:text="${snacks.Crunchiness}" ></p><br />
+price:<p th:text="${snacks.price}" ></p><br />
+
+
+<a th:href="@{/delete/{id}(id=${item.id})}">Delete this jbcstore inventory</a><br />
+
+</body>
+</html>

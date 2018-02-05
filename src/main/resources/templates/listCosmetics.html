@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="www.thymeleaf.org">
+
+<head>
+
+    <meta charset="UTF-8" />
+
+    <title>Title</title>
+
+</head>
+
+<body>
+
+<a href="/add">Add a Cosmotics</a><br />
+
+
+<table>
+
+
+
+    <tr th:each="cosmotics : ${cosmoticss}">
+        <th th:text="${cosmotics.brand}"></th>
+        <th th:text="${cosmotics.price}"></th><br />
+        <th th:text="${cosmotics.popularity}"></th><br />
+
+
+
+        <td>
+
+            <a th:href="@{/update/{id}(id=${resume.id})}">Add a brand</a>
+            <a th:href="@{/update/{id}(id=${resume.id})}">Add a price</a>
+            <a th:href="@{/update/{id}(id=${resume.id})}">Add a popularity</a>
+
+
+
+        </td>
+
+
+    </tr>
+
+
+
+</table>
+
+
+</body>
+
+</html>
