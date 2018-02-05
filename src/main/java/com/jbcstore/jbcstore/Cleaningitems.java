@@ -12,6 +12,15 @@ public class Cleaningitems {
     private String Strength;
     private String price;
 
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    private long id;
 
     public String getStrength() {
         return Strength;
